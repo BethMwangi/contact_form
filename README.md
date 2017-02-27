@@ -1,2 +1,2 @@
 # contact_form
-A contact form using Flask and Python3
+A custom contact form using Flask and Python3
