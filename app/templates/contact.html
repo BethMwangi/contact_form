@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+
+  	<title>Contact</title>
+</head>
+<body>
+
+<h1>Contact Me</h1>
+
+{% if success %}
+<p> Thank you for your message.We'll get back to you.</p>
+
+{% else %}
+
+<form  action="{{ url_for('contact') }}" method=post class="cf">
+{{ form.hidden_tag() }}
+  <div class="half left cf">
+    <input type="text" id="input-name" placeholder="Name">
+    <input type="email" id="input-email" placeholder="Email address">
+    <input type="text" id="input-subject" placeholder="Subject">
+  </div>
+  <div class="half right cf">
+    <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+  </div>  
+  <input type="submit" value="Submit" >
+</form>
+{% endif %}
+</body>
+</html>
